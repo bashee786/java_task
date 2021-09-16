@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="register" th:action="@{/api/register}" onsubmit="return validateForm()" method="post">
+		<label for="name"><b>User Name</b></label> <input
+			placeholder="Enter user Name" name="customerName" id="name" type="text" required="required" min=6 max=25>
+		<label for="password"><b>Password</b></label> <input 
+			placeholder="Enter Password" name="loanAmount" id="amnt"  required="required" >
+		<label for="email"><b>Email</b></label> <input 
+			placeholder="Enter Email" name="interestRate" id="rate" required="required">
+			<label for="address"><b>Address</b></label> <input 
+			placeholder="Enter Address" name="loanAmount" id="amnt"  required="required" >
+			<button class="btn btn-lg btn-primary btn-block signup_btn"
+							type="submit">Submit</button>
+	</form>
+</body>
+</html>
